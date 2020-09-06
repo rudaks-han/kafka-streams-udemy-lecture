@@ -1,6 +1,6 @@
 {
   "type": "object",
-  "javaType": "guru.learningjournal.kafka.examples.types.HeartBeat",
+  "javaType": "rudaks.types.HeartBeat",
   "properties": {
     "AppID": {
       "type": "string"

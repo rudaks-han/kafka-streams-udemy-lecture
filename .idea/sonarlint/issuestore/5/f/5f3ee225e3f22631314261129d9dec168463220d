@@ -1,0 +1,20 @@
+
+f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½Ûš˜
+`
+java:S2095("JUse try-with-resources or close this "KafkaStreams" in a "finally" clause.(êø”Ã
+B
+java:S1612!",Replace this lambda with a method reference.(éÖ«ô
+n
+java:S3252""SUse static access with "org.apache.kafka.common.serialization.Serdes" for "String".(Èú­øùÿÿÿÿ
+B
+java:S1612%",Replace this lambda with a method reference.(œó­©
+i
+java:S3252&"SUse static access with "org.apache.kafka.common.serialization.Serdes" for "String".(›ÔÁ
+i
+java:S3252"SUse static access with "org.apache.kafka.common.serialization.Serdes" for "String".(½Ûš˜
+i
+java:S3252"SUse static access with "org.apache.kafka.common.serialization.Serdes" for "String".(Ìõ›¿
+G
+java:S1612$",Replace this lambda with a method reference.(·®Ò¿şÿÿÿÿ
+d
+java:S1128"IRemove this unused import 'org.apache.kafka.common.serialization.Serdes'.(Ä¾†øÿÿÿÿ

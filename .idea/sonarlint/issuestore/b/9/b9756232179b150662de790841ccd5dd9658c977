@@ -1,0 +1,18 @@
+
+g
+java:S2095*"JUse try-with-resources or close this "KafkaStreams" in a "finally" clause.(êø”Ã8ÿÀÑ¤Â.
+L
+java:S3740 "/Provide the parametrized type for this generic.(ÿÌ° 8ÿÀÑ¤Â.
+N
+java:S1612'",Replace this lambda with a method reference.(ö®Û¼ÿÿÿÿÿ8ÿÀÑ¤Â.
+F
+java:S1068"*Remove this unused "logger" private field.(áÈˆ8ÿÀÑ¤Â.
+m	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Æüõ¦8ÿÀÑ¤Â.
+o
+java:S3252""SUse static access with "org.apache.kafka.common.serialization.Serdes" for "String".(¸ÂÅd8ÿÀÑ¤Â.
+p
+java:S3252"SUse static access with "org.apache.kafka.common.serialization.Serdes" for "String".(£ˆ…Ğ8ÿÀÑ¤Â.
+u
+java:S3252("SUse static access with "org.apache.kafka.common.serialization.Serdes" for "String".(Èú­øùÿÿÿÿ8ÿÀÑ¤Â.
+o
+java:S3252""SUse static access with "org.apache.kafka.common.serialization.Serdes" for "Double".(¸ÂÅd8ÿÀÑ¤Â.

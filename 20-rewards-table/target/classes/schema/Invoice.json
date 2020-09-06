@@ -1,6 +1,6 @@
 {
   "type": "object",
-  "javaType": "guru.learningjournal.kafka.examples.types.PosInvoice",
+  "javaType": "rudaks.types.PosInvoice",
   "properties": {
     "InvoiceNumber": {
       "type": "string"
@@ -50,7 +50,7 @@
     },
     "DeliveryAddress": {
       "type": "object",
-      "javaType": "guru.learningjournal.kafka.examples.types.DeliveryAddress",
+      "javaType": "rudaks.types.DeliveryAddress",
       "properties": {
         "AddressLine": {
           "type": "string"
@@ -73,7 +73,7 @@
       "type": "array",
       "items": {
         "type": "object",
-        "javaType": "guru.learningjournal.kafka.examples.types.LineItem",
+        "javaType": "rudaks.types.LineItem",
         "properties": {
           "ItemCode": {
             "type": "string"

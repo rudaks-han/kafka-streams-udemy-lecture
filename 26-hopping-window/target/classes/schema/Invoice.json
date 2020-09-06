@@ -1,6 +1,6 @@
 {
   "type": "object",
-  "javaType": "guru.learningjournal.kafka.examples.types.SimpleInvoice",
+  "javaType": "rudaks.types.SimpleInvoice",
   "properties": {
     "InvoiceNumber": {
       "type": "string"

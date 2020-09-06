@@ -26,6 +26,9 @@
         <module>28-window-supress</module>
         <module>26-hopping-window</module>
         <module>27-session-window</module>
+        <module>29-kstream-join</module>
+        <module>30-ktable-join</module>
+        <module>31-kstream-gktable-join</module>
     </modules>
 
     <properties>
