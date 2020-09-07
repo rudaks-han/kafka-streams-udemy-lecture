@@ -1,7 +1,7 @@
 
-U	java:S106"9Replace this use of System.out or System.err by a logger.(Ù÷Ä8ñ¥ÊîÂ.
-l
-java:S2095"JUse try-with-resources or close this "KafkaStreams" in a "finally" clause.(‹â…ªûÿÿÿÿ8ñ¥ÊîÂ.
-L
-java:S3416"/Update this logger to use "HelloStreams.class".(‘²‰ğ8ñ¥ÊîÂ.
-]	java:S125"<This block of commented-out lines of code should be removed.(êÌÇŒûÿÿÿÿ8ñ¥ÊîÂ.
+j
+java:S2095"JUse try-with-resources or close this "KafkaStreams" in a "finally" clause.(‹â…ªûÿÿÿÿ8ñ¥ÊîÂ.
+S	java:S106"9Replace this use of System.out or System.err by a logger.(Ù÷Ä8ñ¥ÊîÂ.
+J
+java:S3416"/Update this logger to use "HelloStreams.class".(‘²‰ğ8ñ¥ÊîÂ.
+[	java:S125"<This block of commented-out lines of code should be removed.(êÌÇŒûÿÿÿÿ8ñ¥ÊîÂ.

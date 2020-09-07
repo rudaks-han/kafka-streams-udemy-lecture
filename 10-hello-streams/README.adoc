@@ -40,3 +40,16 @@ stream processing application을 만드는 4가지 단계
 3. Start the Stream
 4. Add shutdown hook
 
+Streams Topology가 무엇인가?
+
+Step-by-step computational logic of a stream processing application.
+
+Kstream은 무엇인가?
+
+Abstraction of a stream of kafka message records.
+- filter()
+- map()
+- flatmap()
+- foreach()
+- to()
+

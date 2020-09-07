@@ -1,11 +1,11 @@
 
-i	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õö½×ùÿÿÿÿ
+m
+java:S3252"SUse static access with "org.apache.kafka.common.serialization.Serdes" for "String".(ú½î8ş¡Â.
+n
+java:S3252"SUse static access with "org.apache.kafka.common.serialization.Serdes" for "String".(Óøæ²8ş¡Â.
 d	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(è¬ÂŠ
 e
 java:S2095"JUse try-with-resources or close this "KafkaStreams" in a "finally" clause.(ÊŠ–¥8ş¡Â.
-n
-java:S3252"SUse static access with "org.apache.kafka.common.serialization.Serdes" for "String".(Óøæ²8ş¡Â.
+i	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õö½×ùÿÿÿÿ
 s
 java:S3252"SUse static access with "org.apache.kafka.common.serialization.Serdes" for "String".(©¢Úøøÿÿÿÿ8ş¡Â.
-m
-java:S3252"SUse static access with "org.apache.kafka.common.serialization.Serdes" for "String".(ú½î8ş¡Â.

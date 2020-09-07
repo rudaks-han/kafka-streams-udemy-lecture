@@ -41,5 +41,10 @@ public class RewardsApp {
 
         KafkaStreams streams = new KafkaStreams(builder.build(), props);
         streams.start();
+
+        Runtime.getRuntime().addShutdownHook(new Thread(() -> {
+            logger.info("Stopping streams");
+            streams.close();
+        }));
     }
 }
