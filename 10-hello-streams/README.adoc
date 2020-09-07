@@ -1,26 +1,42 @@
 [java]
 ----
 public static void main(String[] args) {
-
-    logger.info("Creating Kafka Producer...");
     Properties props = new Properties();
-    props.put(ProducerConfig.CLIENT_ID_CONFIG, AppConfigs.producerApplicationID); <1>
-    props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, AppConfigs.bootstrapServers);
-    props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, IntegerSerializer.class.getName());
-    props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
+    props.put(StreamsConfig.APPLICATION_ID_CONFIG, AppConfigs.applicationID); <1>
+    props.put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, AppConfigs.bootstrapServers); <2>
+    props.put(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG, Serdes.Integer().getClass()); <3>
+    props.put(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG, Serdes.String().getClass());
 
-    KafkaProducer<Integer, String> producer = new KafkaProducer<>(props);
+    StreamsBuilder streamsBuilder = new StreamsBuilder();
+    KStream<Integer, String> kStream = streamsBuilder.stream(AppConfigs.topicName);
+    kStream.foreach((k, v) -> System.out.println("Key = " + k + ", Value = " + v));
+    //kStream.peek((k, v) -> System.out.println("Key = " + k + ", Value = " + v));
 
-    logger.info("Start sending messages...");
-    for (int i = 1; i <= AppConfigs.numEvents; i++) {
-        ProducerRecord producerRecord = new ProducerRecord<>(AppConfigs.topicName, i, "Simple Message-" + i);
-        producerRecord.headers().add("1", "111".getBytes());
-        producer.send(producerRecord);
-    }
+    Topology topology = streamsBuilder.build();
+    KafkaStreams streams = new KafkaStreams(topology, props);
+    streams.start();
 
-    logger.info("Finished - Closing Kafka Producer.");
-    producer.close();
-
+    Runtime.getRuntime().addShutdownHook(new Thread(() -> { <4>
+        logger.info(("Shutting down stream"));
+        streams.close();
+    }));
 }
 ----
+
+1. application별로 unique한 id이어야 한다.
+2. 콤마로 구분된 값
+3. Serde는 Serializer/Deserializer의 약어이다. +
+Serde가 왜 필요한가? +
+Producer는 Serializer가 필요, Consumer는 Deserializer가 필요 +
+Serde는 내부적으로 consumer/producer를 생성한다. +
+Streams API는 한번에 2개를 동시에 사용한다.
+
+4. 유지보수의 이유로 stream을 종료해야 하는 경우때문에 사용
+
+stream processing application을 만드는 4가지 단계
+
+1. Create configuration
+2. Create topology
+3. Start the Stream
+4. Add shutdown hook
 
